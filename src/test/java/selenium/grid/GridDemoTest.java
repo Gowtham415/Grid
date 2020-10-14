@@ -2,7 +2,6 @@ package selenium.grid;
 
 import org.testng.annotations.Test;
 
-import com.sun.tools.xjc.Driver;
 
 import org.testng.annotations.BeforeMethod;
 
@@ -17,7 +16,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 
 public class GridDemoTest {
-	String hubURL = "http://192.168.0.104:4444/wd/hub";
+	String hubURL = "http://10.178.202.205:4444/wd/hub";
 	WebDriver driver;
 
 	@BeforeMethod
@@ -26,6 +25,7 @@ public class GridDemoTest {
 		DesiredCapabilities firefoxCap = new DesiredCapabilities();
 		chromeCap.setBrowserName("chrome");
 		chromeCap.setPlatform(Platform.WINDOWS);
+		
 		
 		firefoxCap.setBrowserName("firefox");
 		firefoxCap.setPlatform(Platform.WINDOWS);
@@ -39,8 +39,6 @@ public class GridDemoTest {
 			e.printStackTrace();
 		}
 		driver.get("https:\\www.gmail.com");
-		
-		
 	}
 
 	@Test
